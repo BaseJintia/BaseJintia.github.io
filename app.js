@@ -1,13 +1,13 @@
 const products = [
     {
-      productName: "Sandia",
+      productName: "Territorio 1",
       price: 15,
-      img: "https://res.cloudinary.com/pabcode/image/upload/v1699869750/e-commerce/ksmw5s3xg7eeakpva5xd.png",
+      img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/5f803eb0c39553bb81ffdff9b3f6fd2a3f1c56d5/Tarjetas/Territorio%201.png",
     },
     {
-      productName: "Cervecita",
+      productName: "Territorio 2",
       price: 20,
-      img: "https://res.cloudinary.com/pabcode/image/upload/v1699869747/e-commerce/xhlekqrockwxzjskzppw.png",
+      img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/5f803eb0c39553bb81ffdff9b3f6fd2a3f1c56d5/Tarjetas/Territorio%202.png",
     },
     {
       productName: "Bananita",
@@ -36,8 +36,8 @@ const products = [
         content.innerHTML = `
             <img src="${product.img}">
             <h3>${product.productName}</h3>
-            <p class="price">${product.price}</p>
-            <button>comprar</button>
+            
+            
             `;
         shopContent.append(content);
       });
