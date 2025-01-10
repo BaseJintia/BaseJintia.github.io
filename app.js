@@ -1,23 +1,23 @@
 const products = [
     {
+      id: "1",
       productName: "Territorio 1",
-      price: 15,
-      img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/5f803eb0c39553bb81ffdff9b3f6fd2a3f1c56d5/Tarjetas/Territorio%201.png",
+      img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Territorio%201.png",
     },
     {
+      id: "2",
       productName: "Territorio 2",
-      price: 20,
-      img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/5f803eb0c39553bb81ffdff9b3f6fd2a3f1c56d5/Tarjetas/Territorio%202.png",
+      img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Territorio%202.png",
     },
     {
-      productName: "Bananita",
-      price: 30,
-      img: "https://res.cloudinary.com/pabcode/image/upload/v1699871193/e-commerce/mopgcvdiepr8axkazmcp.png",
+      id: "3",
+      productName: "Territorio 3",
+      img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Territorio%203.png",
     },
     {
-      productName: "Compu",
-      price: 40,
-      img: "https://res.cloudinary.com/pabcode/image/upload/v1700045911/e-commerce/compu_unvcoi.png",
+      id: "4",
+      productName: "Territorio 4",
+      img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Territorio%204.png",
     },
   ];
   const shopContent = document.getElementById("shopContent");
@@ -34,10 +34,8 @@ const products = [
         const content = document.createElement("div");
         content.className = "card-products";
         content.innerHTML = `
+            <h2>${product.productName}</h2>
             <img src="${product.img}">
-            <h3>${product.productName}</h3>
-            
-            
             `;
         shopContent.append(content);
       });
@@ -47,7 +45,7 @@ const products = [
   
   const handleSearch = () => {
     const searchTerm = searchInput.value.toLowerCase();
-    const filteredProducts = products.filter((product) => product.productName.toLowerCase().startsWith(searchTerm));
+    const filteredProducts = products.filter((product) => product.id.toLowerCase().startsWith(searchTerm));
   
     displayProducts(filteredProducts);
   };
