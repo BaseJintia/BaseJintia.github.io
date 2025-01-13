@@ -19,6 +19,36 @@ const products = [
       productName: "Territorio 4",
       img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Territorio%204.png",
     },
+    {
+      id: "5",
+      productName: "Territorio 5",
+      img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Territorio%205.png",
+    },
+    {
+      id: "6",
+      productName: "Territorio 6",
+      img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Territorio%206.png",
+    },
+    {
+      id: "7",
+      productName: "Territorio 7",
+      img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Territorio%207.png",
+    },
+    {
+      id: "8",
+      productName: "Territorio 8",
+      img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Territorio%208.png",
+    },
+    {
+      id: "9",
+      productName: "Territorio 9",
+      img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Territorio%209.png",
+    },
+    {
+      id: "10",
+      productName: "Territorio 10",
+      img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Territorio%2010.png",
+    },
   ];
   const shopContent = document.getElementById("shopContent");
   const searchInput = document.getElementById("searchInput");
@@ -34,7 +64,7 @@ const products = [
         const content = document.createElement("div");
         content.className = "card-products";
         content.innerHTML = `
-            <h2>${product.productName}</h2>
+            
             <img src="${product.img}">
             `;
         shopContent.append(content);

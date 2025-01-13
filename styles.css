@@ -4,7 +4,7 @@ h1 {
   .search-container {
     max-width: 400px;
     margin: 0vh auto;
-    padding: 20px;
+    padding: 10px;
   }
   
   input[type="text"] {
