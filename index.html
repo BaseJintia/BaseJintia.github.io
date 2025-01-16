@@ -12,7 +12,7 @@
 
     <!-- search content -->
     <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Buscar..." />
+      <input type="text" inputmode="numeric" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="searchInput" placeholder="Buscar..." />
     </div>
     <p id="noResults" class="no-results">No se encontraron resultados.</p>
 
