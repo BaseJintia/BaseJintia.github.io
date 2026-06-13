@@ -215,6 +215,10 @@ const handleSearch = () => {
     product => product.id === searchTerm || product.id === "100"
   );
 
+  if (result.length === 0) {
+    alert("No se encontraron resultados");
+    return;
+  }
   displayProducts(result);
   };
   
