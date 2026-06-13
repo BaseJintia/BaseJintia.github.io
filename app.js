@@ -217,7 +217,7 @@ const handleSearch = () => {
   });
 
   // 3. CORREGIDO: Agregamos el $ antes de las llaves para que la variable funcione
-  const searchLink = `https://githubusercontent.com{encodeURIComponent(searchTerm)}`;
+  const searchLink = `https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Mapa.png{encodeURIComponent(searchTerm)}`;
 
   // 4. Renderizamos los productos filtrados
   displayProducts(filteredProducts, searchLink);
