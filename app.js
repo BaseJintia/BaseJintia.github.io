@@ -203,14 +203,23 @@ const products = [
     }
   };
   
-  const handleSearch = () => {
-    const searchTerm = searchInput.value.toLowerCase();
-    const filteredProducts = products.filter((product) => product.id.toLowerCase().startsWith(searchTerm));
-    const searchLink = "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Mapa.png" + encodeURIComponent(searchTerm);
-  
-    displayProducts(filteredProducts, searchLink);
-  };
-  
-  displayProducts(products);
+const handleSearch = () => {
+  // 1. Obtenemos el término de búsqueda (sigue siendo texto)
+  const searchTerm = searchInput.value.trim().toLowerCase();
+
+  // 2. Filtramos convirtiendo cada ID numérico a String
+  const filteredProducts = products.filter((product) => {
+    // Convertimos el número (ej: 10) a texto (ej: "10")
+    const productIdAsString = String(product.id);
+    
+    // Ahora sí podemos usar startsWith de forma segura
+    return productIdAsString.startsWith(searchTerm);
+  });
+
+  // 3. Concatenamos la URL correctamente sin las llaves {} erróneas
+  const searchLink = `https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Mapa.png{encodeURIComponent(searchTerm)}`;
+
+  // 4. Renderizamos los productos filtrados
+  displayProducts(filteredProducts, searchLink);
   
   searchInput.addEventListener("input", handleSearch);
