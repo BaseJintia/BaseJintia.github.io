@@ -203,23 +203,14 @@ const products = [
     }
   };
   
-const handleSearch = () => {
-  // 1. Obtenemos el término de búsqueda y eliminamos espacios
-  const searchTerm = searchInput.value.trim();
-
-  // Si el usuario no ha escrito nada, puedes limpiar o salir
-  if (!searchTerm) return;
-
-  // 2. Filtramos asegurando coincidencia exacta del ID numérico
-  const filteredProducts = products.filter((product) => {
-    // Convertimos el ID a número para comparar de forma segura
-    return product.id === parseInt(searchTerm, 10);
-  });
-
-  // 3. CORREGIDO: Agregamos el $ antes de las llaves para que la variable funcione
-  const searchLink = `https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Mapa.png{encodeURIComponent(searchTerm)}`;
-
-  // 4. Renderizamos los productos filtrados
-  displayProducts(filteredProducts, searchLink);
+  const handleSearch = () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    const filteredProducts = products.filter((product) => product.id.toLowerCase().startsWith(searchTerm));
+    const searchLink = "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Mapa.png" + encodeURIComponent(searchTerm);
+  
+    displayProducts(filteredProducts, searchLink);
+  };
+  
+  displayProducts(products);
   
   searchInput.addEventListener("input", handleSearch);
