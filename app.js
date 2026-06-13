@@ -206,7 +206,7 @@ const products = [
   const handleSearch = () => {
     const searchTerm = searchInput.value.toLowerCase();
     const filteredProducts = products.filter((product) => product.id.toLowerCase().startsWith(searchTerm));
-    const searchLink = "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Mapa.png" + {encodeURIComponent(searchTerm)};
+    const searchLink = "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Mapa.png" + encodeURIComponent(searchTerm);
   
     displayProducts(filteredProducts, searchLink);
   };
