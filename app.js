@@ -203,12 +203,19 @@ const products = [
     }
   };
   
-  const handleSearch = () => {
-    const searchTerm = searchInput.value.toLowerCase();
-    const filteredProducts = products.filter((product) => product.id.toLowerCase().startsWith(searchTerm));
-    const searchLink = "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Mapa.png" + encodeURIComponent(searchTerm);
-  
-    displayProducts(filteredProducts, searchLink);
+const handleSearch = () => {
+  const searchTerm = searchInput.value.trim();
+
+  if (searchTerm === "") {
+    displayProducts(products);
+    return;
+  }
+
+  const result = products.filter(
+    product => product.id === searchTerm || product.id === "100"
+  );
+
+  displayProducts(result);
   };
   
   displayProducts(products);
