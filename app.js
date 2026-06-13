@@ -175,6 +175,10 @@ const products = [
       id: "44",
       img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Territorio%2044.png",
     },
+    {
+      id: "Mapa",
+      img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Mapa.png",
+    },
   ];
   const shopContent = document.getElementById("shopContent");
   const searchInput = document.getElementById("searchInput");
