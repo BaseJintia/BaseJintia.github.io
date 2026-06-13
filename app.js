@@ -176,7 +176,7 @@ const products = [
       img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Territorio%2044.png",
     },
     {
-      id: "Mapa",
+      id: "100",
       img: "https://raw.githubusercontent.com/BaseJintia/BaseJintia.github.io/refs/heads/main/Tarjetas/Mapa.png",
     },
   ];
