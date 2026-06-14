@@ -225,7 +225,7 @@ if (result.length > 0) {
   };
 
   displayProducts(result);
-  }
+  };
   
   displayProducts(products);
   
