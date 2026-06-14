@@ -212,15 +212,20 @@ const handleSearch = () => {
   }
 
   const result = products.filter(
-    product => product.id === searchTerm || product.id === "100"
+  product => product.id === searchTerm
+);
+
+if (result.length > 0) {
+  const product100 = products.find(
+    product => product.id === "100"
   );
 
-  if (result.length === 0) {
-    alert("No se encontraron resultados");
-    return;
-  }
-  displayProducts(result);
+  if (product100) {
+    result.push(product100);
   };
+
+  displayProducts(result);
+  }
   
   displayProducts(products);
   
