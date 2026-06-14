@@ -127,3 +127,11 @@ h1 {
     right: 20px;
   }
 }
+
+// Esto es para que no desaparezca cuadro busqueda
+.search-container {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 100;
+}
