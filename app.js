@@ -188,7 +188,7 @@ const products = [
     shopContent.innerHTML = "";
   
     if (productList.length === 0) {
-      noResults.style.display = "block";
+      noResults.style.display = "none";
     } else {
       productList.forEach((product) => {
         const content = document.createElement("div");
