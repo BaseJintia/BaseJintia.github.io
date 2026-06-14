@@ -30,8 +30,10 @@ h1 {
     margin: 3vh 3px;
   }
   
-  .card-products img {
-    height: 270px;
+.card-products img {
+  max-width: 100%;
+  height: auto;
+  display: block;
   }
   
   .card-products h3,
@@ -80,3 +82,48 @@ h1 {
     text-align: center;
     display: none;
   }
+
+
+/* ===== Diseño adaptable para tablets y móviles ===== */
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 1.5rem;
+    padding: 0 10px;
+  }
+
+  .search-container {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  input[type="text"] {
+    font-size: 18px;
+    box-sizing: border-box;
+  }
+
+  .card-products {
+    width: 95%;
+    max-width: 450px;
+    margin: 15px auto;
+    box-sizing: border-box;
+  }
+
+  .card-products img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .modal img {
+    max-width: 98%;
+    max-height: 85vh;
+  }
+
+  .close {
+    font-size: 50px;
+    top: 10px;
+    right: 20px;
+  }
+}
