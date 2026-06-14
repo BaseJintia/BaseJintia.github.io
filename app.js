@@ -191,14 +191,13 @@ const products = [
       noResults.style.display = "none";
     } else {
       productList.forEach((product) => {
-        const content = document.createElement("div");
-        content.className = "card-products";
-        content.innerHTML = `
-            
-            <img src="${product.img}">
-            `;
-        shopContent.append(content);
-      });
+  const content = document.createElement("div");
+  content.className = "card-products";
+  content.innerHTML = `
+      <img src="${product.img}" class="zoomable">
+  `;
+  shopContent.append(content);
+});
       noResults.style.display = "none";
     }
   };
@@ -230,3 +229,26 @@ const handleSearch = () => {
   displayProducts(products);
   
   searchInput.addEventListener("input", handleSearch);
+
+
+//Esta relacionado a la IMAGEN
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const close = document.querySelector(".close");
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("zoomable")) {
+    modal.style.display = "flex";
+    modalImg.src = e.target.src;
+  }
+});
+
+close.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
