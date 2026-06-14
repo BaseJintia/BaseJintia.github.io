@@ -212,21 +212,21 @@ const handleSearch = () => {
   }
 
   const result = products.filter(
-  product => product.id === searchTerm
-);
-
-if (result.length > 0) {
-  const product100 = products.find(
-    product => product.id === "100"
+    product => product.id === searchTerm
   );
 
-  if (product100) {
-    result.push(product100);
-  };
+  if (result.length > 0) {
+    const product100 = products.find(
+      product => product.id === "100"
+    );
+
+    if (product100 && searchTerm !== "100") {
+      result.push(product100);
+    }
+  }
 
   displayProducts(result);
-  };
-  
+};  
   displayProducts(products);
   
   searchInput.addEventListener("input", handleSearch);
